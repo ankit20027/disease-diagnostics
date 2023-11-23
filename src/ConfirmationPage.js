@@ -6,9 +6,9 @@ const ConfirmationPage = () => {
 
   return (
     <div>
-      <h1>Thank you for submitting your information!</h1>
-      <p>Your data has been received and will be processed.</p>
-      <p>Your input: {decodeURIComponent(formData)}</p>
+      <h1 style={{color:'black'}}>Thank you for submitting your information!</h1>
+      <p style={{color:'black'}}>Your data has been received and will be processed.</p>
+      <p style={{color:'black'}}>Your input: {decodeURIComponent(formData)}</p>
     </div>
   );
 };

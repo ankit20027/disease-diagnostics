@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import MedicalForm from './MedicalForm';
 import './App.css';
 
+
 const HomePage = () => {
   const navigate = useNavigate();
 
@@ -13,12 +14,13 @@ const HomePage = () => {
 
   return (
     <div>
+      {/* <h1>Welcome to the Medical Website</h1> */}
       <div className="container">
-        <h1>Welcome to the Medical Website</h1>
         <MedicalForm onFormSubmit={handleFormSubmit} />
       </div>
     </div>
-  );
+    
+);
 };
 
 export default HomePage;

@@ -11,14 +11,19 @@ const MedicalForm = ({ onFormSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <textarea
-        rows="4"
-        placeholder="Enter your medical information here..."
-        value={formData}
-        onChange={(e) => setFormData(e.target.value)}
-      />
-      <button type="submit">Submit</button>
+    <form onSubmit={handleSubmit} className="your-form">
+      <div className="form-group">
+        <textarea
+          rows="8"
+          cols="64"
+          placeholder="Enter your medical information here..."
+          value={formData}
+          onChange={(e) => setFormData(e.target.value)}
+        />
+      </div>
+      <div className="form-group">
+        <button type="submit">Submit</button>
+      </div>
     </form>
   );
 };
