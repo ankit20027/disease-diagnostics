@@ -16,7 +16,7 @@ const MedicalForm = ({ onFormSubmit }) => {
         <textarea
           rows="8"
           cols="64"
-          placeholder="Enter your medical information here..."
+          placeholder="Example: headache, vomiting ETC........"
           value={formData}
           onChange={(e) => setFormData(e.target.value)}
         />
