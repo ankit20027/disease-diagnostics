@@ -115,3 +115,21 @@ button:hover {
   background: rgb(0 0 0 / 0.4);
 }
 
+#chatbox {
+  background-color: #e1f5fe; /* Light blue background */
+  border: 1px solid #0d47a1; /* Dark blue border */
+  padding: 30px;
+  margin: 10px;
+  color: #d32f2f; /* Dark red text color */
+  font-family: 'Arial', sans-serif;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-weight: bolder;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: x-large;
+  width: 50vw;
+  min-height: 80vh;
+  position: absolute;
+  top: 10%;
+  left:20%;
+}

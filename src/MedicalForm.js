@@ -5,8 +5,8 @@ const MedicalForm = ({ onFormSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform any data processing or API calls here if needed
-    // Pass the form data to the parent component
+    //process dataa
+    // console.log(formData);
     onFormSubmit(formData);
   };
 
@@ -14,8 +14,9 @@ const MedicalForm = ({ onFormSubmit }) => {
     <form onSubmit={handleSubmit} className="your-form">
       <div className="form-group">
         <textarea
-          rows="8"
+          rows="4"
           cols="64"
+          style={{fontSize:'20px'  }}
           placeholder="Example: headache, vomiting ETC........"
           value={formData}
           onChange={(e) => setFormData(e.target.value)}
