@@ -1,5 +1,4 @@
-
-const sendFormDataToBackend = async (formData) => {
+const sendFormDataToBackend = async (formData, setResponse) => {
     try {
       const response = await fetch(`http://127.0.0.1:8000/getDignostics?query=${encodeURIComponent(formData)}`, {
         method: 'GET',
@@ -14,7 +13,8 @@ const sendFormDataToBackend = async (formData) => {
       }
   
       const result = await response.json();
-      console.log(result); // Handle the result as needed
+      // console.log(result); // Handle the result as needed
+      setResponse(result);
   
     } catch (error) {
       console.error('Error sending form data to backend:', error);
@@ -22,4 +22,3 @@ const sendFormDataToBackend = async (formData) => {
   };
   
   export default sendFormDataToBackend;
-  
