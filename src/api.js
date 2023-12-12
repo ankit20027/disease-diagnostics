@@ -1,23 +1,20 @@
-const sendFormDataToBackend = async (formData, setResponse) => {
+import axios from "axios";
+
+const sendFormDataToBackend = async (formData, setResponse, setLoading) => {
     try {
-      const response = await fetch(`http://127.0.0.1:8000/getDignostics?query=${encodeURIComponent(formData)}`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          // Add any additional headers if needed
-        },
-      });
+      const response = await axios.get(`http://127.0.0.1:8000/getDignostics?query=${encodeURIComponent(formData)}`, {
+        headers: { 'Content-Type': 'application/json' }
+      })
   
-      if (!response.ok) {
-        throw new Error('Failed to fetch data from the server');
-      }
-  
-      const result = await response.json();
-      // console.log(result); // Handle the result as needed
-      setResponse(result);
-  
+      // const result = await response.json();
+      setResponse(response.data);
+      console.log(response.data);
+
     } catch (error) {
-      console.error('Error sending form data to backend:', error);
+      console.error('Error:', error);
+
+    } finally {
+      setLoading(false);
     }
   };
   

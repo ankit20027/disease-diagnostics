@@ -5,8 +5,6 @@ const MedicalForm = ({ onFormSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    //process dataa
-    // console.log(formData);
     onFormSubmit(formData);
   };
 
@@ -17,7 +15,7 @@ const MedicalForm = ({ onFormSubmit }) => {
           rows="4"
           cols="64"
           style={{fontSize:'20px'  }}
-          placeholder="Example: headache, vomiting ETC........"
+          placeholder="Example: Red spots over body and also feeling fever since last night ETC........"
           value={formData}
           onChange={(e) => setFormData(e.target.value)}
         />

@@ -1,0 +1,1 @@
+pip install pandas spacy tranformers torch numpy scikit-learn uvicorn fastapi
