@@ -34,7 +34,7 @@ def search(query: str):
     }
     headers = {
         "content-type": "application/json",
-        "X-RapidAPI-Key": "ec97e6748fmshda0e846df924e25p17d0dejsn558491f16c2f",
+        "X-RapidAPI-Key": "b418c4f567msh3f183c8ccce40bap10fd62jsn39346ec315cc",
         "X-RapidAPI-Host": "chatgpt-42.p.rapidapi.com"
     }
     return json.loads(requests.post(gpt_url, json=payload, headers=headers).content)['result']
@@ -50,9 +50,6 @@ def getDignostics(query: str):
     early_symptoms = search(f"Early-stage symptoms of {disease} and make your response concise")
     precautions = search(f"Precautions for {disease} and make your response concise")
     medications = search(f"Medications for {disease} and make your response concise")
-    # early_symptoms = "Malaria is a mosquito-borne parasitic disease that can cause high fever, severe chills and sweating. Common symptoms include: high fever, shaking chills, profuse sweating, headache, abdominal pain, muscle pain, nausea, vomiting, diarrhea, anemia, deep breathing and respiratory distress, clinical jaundice and evidence of vital organ dysfunction, impaired consciousness, bloody stools, convulsions, and coma. If you or someone you know is exhibiting symptoms of Malaria, seek medical attention immediately."
-    # precautions = "Malaria is a serious and sometimes fatal disease caused by a parasite that commonly infects a certain type of mosquito which feeds on humans. Travelers should take precaution when traveling to areas where malaria transmission occurs. For information for travelers who reside in the United States, please visit ."
-    # medications = "Malaria is treated with a combination of antimalarial medications that includes artemisinin. The second medication may be either mefloquine, lumefantrine, or sulfadoxine/pyrimethamine ."
 
     return { "Disease": disease, 
              "SearchResponse": {

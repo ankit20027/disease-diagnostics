@@ -25,7 +25,7 @@ const HomePage = () => {
         <img src={logo} style={{left:'0px',top:'10px',height:'100px',width:'100px',padding:'20px',position:'absolute'}} alt=''></img>
 
         <div className="overlay-element">
-          <h1 style={{color:'black',alignSelf:'center'}}>DISEASE RECOMMENDATION SYSTEM</h1>
+          <h1 style={{color:'black',alignSelf:'center'}}>DISEASE DIAGNOSIS SYSTEM</h1>
           <h3 style={{color:'grey',alignSelf:'center'}}>What is the main symptom you are experiencing?</h3>
 
           <MedicalForm onFormSubmit={handleFormSubmit} />
